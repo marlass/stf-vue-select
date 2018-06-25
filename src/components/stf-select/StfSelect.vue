@@ -202,7 +202,15 @@ export default {
       event.preventDefault();
       event.stopPropagation();
     },
-
+    toggle(event) {
+      if (this.isOpened) {
+        this._close();
+      } else {
+        this._open();
+      }
+      event.preventDefault();
+      event.stopPropagation();
+    },
     openClose() {
       this.isOpened = !this.isOpened;
       if (this.isOpened) {
